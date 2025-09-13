@@ -1,14 +1,12 @@
-# Web-Scraper
-This is a basic web scraper which extracts the headlines of web pages.
-# BBC News Headlines Scraper
+# Futurism Headlines Scraper
 
-A simple Python script that scrapes the latest headlines from [BBC News](https://www.bbc.com/news) and saves them into a text file.
+A simple Python script that scrapes the latest headlines from [Futurism - Latest](https://futurism.com/latest) and saves them into a text file.
 
 ---
 
 ## 🚀 Features
-- Fetches the BBC News homepage.
-- Extracts headlines from `<h2>` tags.
+- Fetches the Futurism "Latest" page.
+- Extracts headlines stored in specific `<div>` elements.
 - Saves the results into `headlines.txt` with numbering.
 
 ---
