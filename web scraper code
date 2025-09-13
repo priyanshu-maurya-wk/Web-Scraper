@@ -1,21 +1,17 @@
 import requests
 from bs4 import BeautifulSoup
 
-# Step 1: Send request
 url = "https://www.bbc.com/news"
 response = requests.get(url)
 
-# Step 2: Parse HTML
 soup = BeautifulSoup(response.text, "html.parser")
 
-# Step 3: Extract headlines
 headlines = []
 for h in soup.find_all("h2"):
     headlines.append(h.get_text(strip=True))
 
-# Step 4: Save to file
 with open("headlines.txt", "w", encoding="utf-8") as f:
     for idx, line in enumerate(headlines, 1):
         f.write(f"{idx}. {line}\n")
 
-print("✅ Headlines saved to headlines.txt")
+print("Headlines saved to headlines.txt")
